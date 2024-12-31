@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="contactForm" onsubmit="sendToWhatsApp(event)">
+        <div class="f-c">
+          <div class="row1 br">
+            <div class="item"><h5>Name *</h5></div>
+            <div class="item"><input type="text" name="name" required></div>
+          </div>
+          <div class="row1">
+            <div class="item"><h5>Comments *</h5></div>
+            <div class="item"><textarea name="comments" required></textarea></div>
+          </div>
+        </div>
+        <button type="submit" class="but">Send</button>
+      </form>
+      
+      <script>
+        function sendToWhatsApp(event) {
+          event.preventDefault(); // Prevent form submission
+      
+          // Get form data
+          const form = document.getElementById('contactForm');
+          const name = form.querySelector('input[name="name"]').value;
+          const comments = form.querySelector('textarea[name="comments"]').value;
+      
+          // Construct WhatsApp message
+          const message = `Name: ${encodeURIComponent(name)}%0AComments: ${encodeURIComponent(comments)}`;
+      
+          // Redirect to WhatsApp
+          const phoneNumber = '919080924519'; // Replace with your phone number
+          const whatsappURL = `https://wa.me/${9080924519}?text=${message}`;
+          window.open(whatsappURL, '_blank'); // Open in a new tab
+        }
+      </script>
+</body>
+</html>
