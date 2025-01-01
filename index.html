@@ -4,25 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MK</title>
-    <style>
-    header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-      @media screen and (max-width:700px) {
-          header{
-              width:100%;
-          }
-          img{
-            width: 250px;
+   <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
         }
-    }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+
+        header img {
+            width: 80%;
+            height: auto;
+        }
+
+        .content {
+            margin: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 700px) {
+            header img {
+                width: 80%; /* Still 80% of header in smaller screens */
+                max-width: 250px; /* Restrict max size for very small screens */
+            }
+        }
     </style>
 </head>
 <body>
